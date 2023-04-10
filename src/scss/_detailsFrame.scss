@@ -1,0 +1,29 @@
+@use './abstracts/mixins';
+@import './abstracts/variables';
+
+.main {
+
+    &__details {
+        width: 100%;
+        padding: 13px;
+        border-radius: 15px;
+        background-color: $bg2;
+
+        
+        &--grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px
+        }
+        
+        p { letter-spacing: 1px ;display: inline; }
+        h2 {margin-bottom: 5px;}
+        @media screen and (min-width: 480px) {
+            padding: 13px 20px;
+            &--grid { gap: 20px }
+        }
+        @media screen and (min-width: 768px) { &--grid { gap: 30px } }
+    }
+
+
+}

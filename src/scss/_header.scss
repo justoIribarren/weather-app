@@ -1,0 +1,59 @@
+@use './abstracts/mixins';
+@import './abstracts/variables';
+
+.header {
+    @include mixins.flex(center, space-between, row);
+    gap: 20px;
+    max-width: 100vw;
+    height: 100%;
+    padding: 13px;
+
+    &__input {
+        position: relative;
+        width: 100%; 
+    }
+    
+    .input-container {
+        @include mixins.flex(center, center, row);
+        border-radius: 15px;
+        background-color: $bg2;
+        height: 30px;
+        padding-right: .625rem;
+        span { 
+            padding-left: 13px;
+            font-size: .9375rem; 
+            color: $fontsec;
+        }
+    }
+
+    .input-options {
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        margin-top: 7px;
+        padding: 5px 0px;
+        border-radius: 7px;
+        background-color: $bg2;
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.2);
+        font-size: .625rem;
+        color: $fontsec;
+
+        p:hover { background-color: $bg3; }
+        p { padding: 5px 13px }
+    }
+    
+    .input {
+        width: 100%;
+        background-color: $bg2;
+        border: none;
+        border-radius: 22px;
+        height: 30px;
+        color: $fontsec;
+        padding: .8125rem;
+        font-size: .625rem;
+    }
+
+    @media screen and (min-width: 480px) { padding: 20px 20px 13px }
+    @media screen and (min-width: 768px) { padding: 20px 20% 20px }
+    @media screen and (min-width: 1280px) { padding: 20px 25% 20px }
+}

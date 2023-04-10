@@ -1,0 +1,42 @@
+@use './abstracts/mixins';
+@import './abstracts/variables';
+
+.main {
+
+    &__hourly {
+        
+        width: 100%;
+
+        &--block {
+            @include mixins.flex(center, space-around, row);
+            margin-top: 10px;
+        }
+        
+        &--info {
+            @include mixins.flex(center, center, column);
+            gap: 5px;
+        }
+        
+        .divY {
+            width: 1px;
+            height: 50px;
+            background-color: $fontsec;
+            opacity: .5;
+        }
+        
+        .bg { 
+            @include mixins.bg-icon(); 
+        }
+        .temp { font-size: 1rem; }
+        span { font-size: 1.875rem; }
+        
+        @media screen and (min-width: 600px) { 
+            
+            &--block { margin-top: 20px; }
+            &--info { gap: 10px; }
+            &--title { margin-top: 5px; }
+            .temp { font-size: 1.2rem; }
+            span { font-size: 35px; }
+        } 
+    }
+}

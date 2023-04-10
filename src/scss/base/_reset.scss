@@ -1,0 +1,75 @@
+@use '../abstracts/mixins';
+@import '../abstracts/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    // overflow-x: hidden;
+    letter-spacing: .5px;
+    outline: none;
+}
+
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: $bg1;
+    color: $font;
+    overflow-x: hidden;
+    &::-webkit-scrollbar { display: none; }
+}
+
+main { min-height: 95vh; }
+
+a { 
+    text-decoration: none; 
+    color: $font;
+}
+
+li { list-style: none;}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 11px; 
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 10px; 
+}
+
+p {
+    font-size: 9px;
+    font-weight: 300;
+}
+
+.icon { 
+    @include mixins.flex(center, center, row);
+    position: relative;
+}
+.bg { 
+    @include mixins.bg-icon(); 
+}
+
+.details--row {
+    @include mixins.flex(center, space-between, row);
+    margin-bottom: 3px;
+    width: 100%
+}
+
+@media screen and (min-width: 600px) { 
+    p { font-size: 11px; }
+    h3 {font-size: 12px; }
+    h2 {font-size: 14px; }
+} 

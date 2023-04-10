@@ -1,0 +1,32 @@
+@use './abstracts/mixins';
+@import './abstracts/variables';
+
+.footer {
+    @include mixins.flex(center, center, column);
+    padding: 25px 13px;
+    
+    width: 100vw;
+    border-top: 1px solid $bg3;
+    &__contact {
+        @include mixins.flex(center, center, row);
+        gap: 20px;
+        height: 30px;
+        
+        &--content{ span { @include mixins.flex(center, center, row);} }   
+        .fa-brands { font-size: 1.25rem; }
+        span { 
+            font-size: .875rem;
+            font-weight: 100; 
+        }
+        a {
+            font-size: 14px;
+            font-weight: 700; 
+        }
+    }
+    
+    &__copy {
+        @include mixins.flex(center, center, row);
+        gap: 20px;
+        font-size: .6875rem;
+    }
+}
