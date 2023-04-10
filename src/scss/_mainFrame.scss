@@ -45,7 +45,7 @@
             padding-top: 11px;
         }
         &--detail {
-            // margin-bottom: -2px;
+            margin-bottom: -2px;
             @include mixins.flex(center, space-between, row);
         }
     }
@@ -64,6 +64,6 @@
         &__info--temp { gap: 10px; }
         span { font-size: 48px; font-weight: 500;}
     }
-
+    
     @media screen and (min-width: 1280px) { padding: 0 25% 30px; }
 }
