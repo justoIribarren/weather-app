@@ -2,7 +2,7 @@ import { useState, useEffect} from 'react'
 
 const Header = ({ onSearchChange }) => {
 
-  const URL = 'http://api.openweathermap.org/geo/1.0/direct?'
+  const URL = 'https://api.openweathermap.org/geo/1.0/direct?'
   const KEY = '03274569d0683f10a05a188a0121cede'
 
   const [cities, setCities] = useState()
@@ -54,7 +54,7 @@ const Header = ({ onSearchChange }) => {
           <p data-lat={city.lat} data-lon={city.lon} data-name={city.name} data-country={city.country} key={idx} onClick={ handleOption }>
               { `${city.name}${ city.state ? ", " + city.state : ""} (${city.country})`  }
             </p>
-          ) ) : <p> "No se encontraron resultados" </p> }
+          ) ) : <p> No se encontraron resultados </p> }
         </div> 
         }
       </div>
