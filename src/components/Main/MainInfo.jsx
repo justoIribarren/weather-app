@@ -1,4 +1,3 @@
-import { useState, 	useEffect } from "react"
 import { useIcon } from "../hooks/useIcon"
 
 const MainInfo = ( { weather, dayState} ) => {
