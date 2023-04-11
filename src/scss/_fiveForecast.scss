@@ -8,11 +8,13 @@
     padding: 0 13px;
     background-color: $bg2;
     border-radius: 12px;
+
     
     &__header {
         @include mixins.flex(center, space-between, row);
         height: 40px;
         width: 100%;
+        cursor: pointer;
         
         &--data {
             @include mixins.flex(center, center, row);
