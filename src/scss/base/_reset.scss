@@ -53,14 +53,17 @@ p {
     font-size: 9px;
     font-weight: 300;
 }
+span::selection{display: none}
 
 .icon { 
     @include mixins.flex(center, center, row);
     position: relative;
+    &::selection{display: none}
 }
 .bg { 
     @include mixins.bg-icon(); 
 }
+
 
 .details--row {
     @include mixins.flex(center, space-between, row);
