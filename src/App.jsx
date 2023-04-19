@@ -5,7 +5,9 @@ import Footer from './components/Footer/Footer'
 
 function App () {
   const [props, setProps] = useState(null)
-  const onSearchChange = (props) => setProps(props)
+  const onSearchChange = (props) => {
+    setProps(props)
+  }
   return (
     <div className='page__container'>
       <header><Header onSearchChange={onSearchChange} /> </header>
