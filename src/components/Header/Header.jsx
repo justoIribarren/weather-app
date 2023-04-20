@@ -10,18 +10,17 @@ const Header = ({ onSearchChange }) => {
   const handleSearch = (e) => {
     debouncedGetSearch(e.target.value)
   }
-
   return (
     <div className='header'>
       <div className='header__input'>
         <div className='input-container'>
-          <span className='material-symbols-rounded'> search </span>
           <input
             type='text'
             className='input'
             placeholder='Buscar ciudad'
             onChange={handleSearch}
           />
+          <span className='material-symbols-rounded'> search </span>
         </div>
         {cities &&
           <div className='input-options'>

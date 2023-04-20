@@ -4,7 +4,6 @@ import { KEY } from './utilities'
 
 export const getSearches = () => {
   const [cities, setCities] = useState(null)
-
   const fetching = (search) => {
     if (search === '' || !search) {
       setCities('')
@@ -20,7 +19,6 @@ export const getSearches = () => {
           country: city.country,
           state: city.state
         }))
-
         setCities(cities)
       })
   }

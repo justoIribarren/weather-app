@@ -3,7 +3,7 @@ const Footer = () => {
     <div className='footer'>
       <div className='footer__contact'>
         <div className='footer__contact--name'>
-          <span className='footer__name--link'>Made  by </span>
+          <span className='footer__name--link'>Hecho por</span>
           <a href='https://justoiribarren.github.io/' target='_blank' rel='noopener noreferrer' className='footer__name--link'> Justo Iribarren </a>
         </div>
 
